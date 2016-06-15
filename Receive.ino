@@ -15,9 +15,9 @@ void loop() {
     if (value == 0) {
       Serial.print("Unknown encoding");
     } else {
-      Serial.print("[{\"action\":\"received\",\"value\":");
-      Serial.print( mySwitch.getReceivedValue() );
-      Serial.println("}]");
+      Serial.print("{\"action\":\"received\",\"value\":");
+      Serial.print(value);
+      Serial.print("}\n");
     }
     delay(200); 
     mySwitch.resetAvailable();
